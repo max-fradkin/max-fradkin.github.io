@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Max Fradkin | Personal Portfolio</title>
+  <title>Max | Personal Portfolio</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -14,15 +14,43 @@
       color: #24292e;
       background-color: #f8f9fa;
     }
-    header, section { 
+    
+    header { 
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem; 
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      /* New: Flexbox to align name and photo */
+      display: flex;
+      align-items: center;
+      gap: 1.5rem; /* Space between photo and name text */
+    }
+
+    /* Style for your circular headshot */
+    .headshot-img {
+      width: 100px; /* Size of the headshot */
+      height: 100px;
+      border-radius: 50%; /* Makes it circular */
+      object-fit: cover; /* Ensures image isn't stretched */
+      border: 3px solid #cc0033; /* Rutgers Scarlet border */
+    }
+
+    /* Container for name and statement, next to photo */
+    .header-text {
+      flex: 1; /* Takes remaining space */
+    }
+
+    h1 { color: #cc0033; margin-top: 0; margin-bottom: 0.5rem;} /* Rutgers Scarlet Accent */
+    h2 { color: #111; border-bottom: 2px solid #e1e4e8; padding-bottom: 0.5rem; }
+    
+    section { 
       background: #ffffff;
       padding: 1.5rem;
       border-radius: 8px;
       margin-bottom: 2rem; 
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
-    h1 { color: #cc0033; margin-top: 0; } /* Rutgers Scarlet Accent */
-    h2 { color: #111; border-bottom: 2px solid #e1e4e8; padding-bottom: 0.5rem; }
     .skills-list {
       display: flex;
       flex-wrap: wrap;
@@ -57,10 +85,14 @@
 </head>
 <body>
 
-  <!-- Section 1: Personal Statement -->
+  <!-- Section 1: Personal Statement and Headshot -->
+  <header>
+    <!-- Your Circular Headshot -->
+    <img src="headshot.jpg" alt="Max's Headshot" class="headshot-img">
+ 
   <header>
     <h1>Max Fradkin</h1>
-    <p><strong>Personal Statement:</strong> Dedicated Division I student-athlete at Rutgers Business School blending finance, athletic leadership, and community service to drive operational efficiency and positive organizational impact.</p>
+    <p><strong>Personal Statement:</strong> Dedicated Division I student-athlete at Rutgers Business School, blending finance, athletic leadership, and community service to drive operational efficiency and positive organizational impact.</p>
   </header>
 
   <!-- Section 2: Highlighted Skills -->
